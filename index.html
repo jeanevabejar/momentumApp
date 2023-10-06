@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum Dash</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- video background -->
+    <video id="background-video" autoplay loop muted src="https://assets.mixkit.co/videos/preview/mixkit-bubbling-water-in-slow-motion-182-large.mp4" type="video/mp4">
+    </video>
+    <!-- box 1: background && weather -->
+    <header>
+      <div id="box-1">
+        <div id="background">
+          <span id="background-icon" class="material-symbols-outlined" > web_stories </span>
+        </div>
+        <div id="weather">
+          <span class="material-symbols-outlined">
+            device_thermostat
+            </span>
+          <h2 id="forecast">weather</h2>
+        </div>
+      </div>
+    </header>
+    <!-- box 2: quotes, clock, message && name, focus -->
+    <main>
+      <div id="box-2">
+        <div id="quotes"><h4 id="quotes-data">quotes</h4></div>
+        <div id="clock">
+          <div id="container">
+            <h1 id="hours"></h1>
+            <h1 id="mins"></h1>
+            <h1 id="sec"></h1>
+            <h2 id="day-time"></h2>
+          </div>
+        </div>
+        <div id="message-box">
+          <h2 id="message">greetings</h2>
+          <input type="text" id="mes-input" />
+        </div>
+        <div id="question">
+          <h3>What is your main focus for today?</h3>
+        </div>
+        <div id="focus">
+          <input type="text" id="focus-input" />
+        </div>
+      </div>
+    </main>
+    <!-- box 3: location search for weather && to-do list -->
+    <footer>
+      <div id="box-3">
+        <div class="box-3-1">
+          <span id="locate" class="material-symbols-outlined"> settings </span>
+          <h4 id="location">location</h4>
+          <div class="settings display">
+            <div class="set-box">
+              <button type="submit" class="search-btn">
+                <span class="material-symbols-outlined"> search </span>
+              </button>
+              <input type="text" class="search" placeholder="Search Location" />
+            </div>
+          </div>
+        </div>
+        <div class="box-3-2">
+          <span id="notes" class="material-symbols-outlined">
+            stylus_note
+          </span>
+          <div class="todolist display ">
+            <div class="to-do">
+              <h1>To-do</h1>
+              <div class="screen">
+                <input id="todo-input" type="text" placeholder="New todo"/>
+                <button class="add">+</button>
+              </div>
+              <ul class="list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

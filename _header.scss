@@ -1,0 +1,21 @@
+@use './index' as *;
+
+  #box-1 {
+    @include min(95%, 10vh);
+    @include max(95%, auto);
+    @include display(space-around, center);
+  
+    #background {
+      @include min(50%, 10vh);
+      @include display(flex-start, center);
+    }
+    #weather {
+      @include min(50%, 10vh);
+      @include max(50%, 10vh);
+      @include display(flex-end, center);
+      font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+  }
+  #weather::after {
+    content: "°C";
+  }

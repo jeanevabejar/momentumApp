@@ -1,0 +1,18 @@
+
+
+@mixin min($minwidth, $minheight) {
+    min-width: $minwidth;
+    min-height: $minheight;
+  }
+  
+  @mixin max($maxwidth, $maxheight) {
+    max-width: $maxwidth;
+    max-height: $maxheight;
+  }
+  
+  @mixin display($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    color: white;
+  }

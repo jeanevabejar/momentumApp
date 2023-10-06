@@ -1,0 +1,120 @@
+@use "./index" as *;
+
+#box-2 {
+  @include min(95%, 65vh);
+  @include max(95%, auto);
+  @include display(space-around, center);
+  mix-blend-mode: difference;
+  #quotes {
+    @include min(100%, 10vh);
+    @include display(center, flex-end);
+    h4 {
+      @include max(100%, auto);
+      @include display(center, center);
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+    input{
+      @include min(5%, 7vh);
+      @include min(10%, 7vh);
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: gray, $alpha: 0.8);
+      outline: none;
+      font-size: clamp(1rem, 2vw, 2rem);
+      color: white;
+    } input:focus{
+      @include min(20%, 5vh);
+      background-color: transparent;
+      transition: 2s;
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: white, $alpha: 0.3);
+      color: white;
+      outline: none;
+    }
+  }
+  #clock {
+    @include min(100%, 20vh);
+    @include display(space-evenly, center);
+    #container {
+        @include max(50vw, auto);
+      @include min(fit-content, auto);
+      @include display(space-around, center);
+    }
+    #hours, #mins, #sec, #day-time{
+      font-size: clamp(3.5rem, 10vw, 10rem);
+    }
+  }
+  #message-box {
+    @include display(center, center);
+    @include min(100%, auto);
+    text-transform: capitalize;
+    flex-wrap: wrap;
+    #message {
+      @include min(20%, 7vh);
+      @include max(100%, auto);
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      padding-right: 1rem;
+      text-align: center;
+    } h2{
+      font-size: clamp(2.5rem, 6vw, 6rem);
+    }
+    #mes-input {
+      @include min(15%, 7vh);
+      @include max(15%, 7vh);
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: gray, $alpha: 0.3);
+      outline: none;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    #mes-input:focus {
+      @include min(20%, 5vh);
+      background-color: transparent;
+      transition: 2s;
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: white, $alpha: 0.3);
+      color: white;
+      outline: none;
+    }
+  }
+  #question {
+    @include display(center, flex-end);
+    @include min(100%, 10vh);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+  #focus {
+    @include display(center, center);
+    @include min(100%, 10vh);
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    text-transform: capitalize;
+    #focus-input {
+      @include min(20%, 10vh);
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: gray, $alpha: 0.3);
+      background-color: transparent;
+      font-size: clamp(2rem, 3vw, 3rem);
+      text-align: center;
+      outline: none;
+      color: white;
+    }
+    h1{
+      font-size: clamp(2.5rem, 4vw, 4rem);
+    }
+    #focus-input:focus {
+      @include min(40%, 5vh);
+      transition: 2s;
+      border: none;
+      border-bottom: 0.2rem solid rgba($color: white, $alpha: 0.3);
+      outline: none;
+    }
+    
+  }
+}
+#hours:after,
+#mins:after {
+  content: ":";
+}
+
